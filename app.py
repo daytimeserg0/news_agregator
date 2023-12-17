@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_file
 import psycopg2
 from config import host, user, password, db_name
 
@@ -24,8 +24,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    news_data = fetchall()
-    return render_template('index.html')
+    return send_file('templates/index.html')
 
 @app.route('/get_data', methods=['GET'])
 def get_data():
