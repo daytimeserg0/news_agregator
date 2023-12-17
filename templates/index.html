@@ -6,10 +6,10 @@
     <title>Агрегатор Новостей</title>
     <link rel="stylesheet" type="text/css" href="static/styles/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="static/scripts_js/clicks.js"></script>
     <script src="static/scripts_js/fetchNews.js"></script>
     <script src="static/scripts_js/toogleTheme.js"></script>
     <script src="static/scripts_js/searchPage.js"></script>
-    <script src="static/scripts_js/clicks.js"></script>
 </head>
 <body>
 
@@ -28,7 +28,7 @@
                 <img id="sunIcon" src="static/icons/sun-icon.png" alt="Sun Icon" style="display: none;">
             </label>
         </div>
-        <form class="form-inline my-2 my-lg-0" onsubmit="return searchPage()">
+        <form class="form-inline my-2 my-lg-0" onsubmit="return searchPage(event)">
             <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Введите тег" aria-label="Search" required>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
         </form>
@@ -42,7 +42,7 @@
     </div>
 </main>
 
-<footer class="bg-dark text-light text-center py-3">
+<footer class="bg-dark text-light text-center py-3 fixed-bottom">
     &copy; 2023 Агрегатор новостей
 </footer>
 

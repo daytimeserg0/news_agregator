@@ -32,38 +32,50 @@ def get_data():
     return jsonify(news_data)
 
 
-@app.route('/search-results')
-def search_results():
+@app.route('/search', methods=['POST'])
+def search():
     news_data = fetchall()
+    data = request.form
     # Получение значения запроса из строки параметров URL
-    original_search_query = request.args.get('query', '')
+    original_search_query = data.get('query', '')
     search_query = original_search_query.lower()
 
     news_counter = 0
     for news_item in news_data:
         news = []
         for tag in news_item[3]:
-            tag_words = tag.lower().split()
-            for tag_word in tag_words:
-                if tag_word.lower().startswith(search_query.lower()):
-                    if news_item not in news:
-                        news.append(news_item)
-                        news_counter += 1
+            if tag.lower().startswith(search_query.lower()):
+                if news_item not in news:
+                    news.append(news_item)
+                    news_counter += 1
 
-    return render_template('search-results.html', news=news_data, search_query=search_query,
-                           or_search_query=original_search_query, found_news=news_counter)
+    response_data = {
+        "news": news_data,
+        "search_query": search_query,
+        "or_search_query": original_search_query,
+        "found_news": news_counter
+    }
 
-@app.route('/tag-news')
+    return jsonify(response_data)
+
+@app.route('/tag-news', methods=['POST'])
 def tags():
     news_data = fetchall()
-    tag_query = request.args.get('tag', '')
+    data = request.form
+    tag_query = data.get('query', '')
     news_counter = 0
     for news_item in news_data:
         for tag in news_item[3]:
             if tag == tag_query:
                 news_counter += 1
 
-    return render_template('tag-news.html', news=news_data, tag_query=tag_query, found_news=news_counter)
+    response_data = {
+        "news": news_data,
+        "search_query": tag_query,
+        "found_news": news_counter
+    }
+
+    return jsonify(response_data)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -34,6 +34,7 @@
 
 .tags_finder {
     margin-bottom: 30px;
+    width: 100vw;
 }
 
 .tag, .found_tag {
@@ -201,6 +202,10 @@ body.dark .navbar-brand {
     left: -10px; /* Измените значение сдвига по вашему усмотрению */
 }
 
+.single-result {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 
