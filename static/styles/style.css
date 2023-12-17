@@ -1,0 +1,210 @@
+.tag {
+    background-color: #e8e8e8;
+    margin-right: 5px;  /* Добавляет немного пространства между тегами */
+    display: inline-block;
+    margin-bottom: 5px;  /* Добавляет отступ снизу между тегами */
+    }
+.tag:hover {
+    background-color: #e3e567;
+}
+
+.found_tag {
+    background-color: #fdff85;
+    margin-right: 5px;  /* Добавляет немного пространства между тегами */
+    display: inline-block;
+    margin-bottom: 5px;  /* Добавляет отступ снизу между тегами */
+    }
+.found_tag:hover {
+    background-color: #e3e567;
+}
+
+.news-cont {
+        position: relative;
+        border: 2px solid #ccc;
+        padding: 20px 20px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-left: 10px;
+        width: 31vw;
+    }
+
+.news-cont:hover {
+    background-color: #e8e8e8;
+}
+
+.tags_finder {
+    margin-bottom: 30px;
+}
+
+.tag, .found_tag {
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.tag, .found_tag, .news-cont {
+    transition: background-color 0.3s;
+}
+
+.light {
+    background-color: #fff; /* цвет фона для светлой темы */
+    color: #333; /* цвет текста для светлой темы */
+}
+
+/* Стили для темной темы */
+.dark {
+    background-color: #333; /* цвет фона для темной темы */
+    color: #fff; /* цвет текста для темной темы */
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+body.dark {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Стили для светлой темы */
+body.light .tag {
+    background-color: #e8e8e8;
+}
+
+body.light .tag:hover {
+    background-color: #e3e567;
+}
+
+body.light .found_tag {
+    background-color: #fdff85;
+}
+
+body.light .found_tag:hover {
+    background-color: #e3e567;
+}
+
+body.light .news-cont {
+    border: 2px solid #ccc;
+    background-color: #ffffff;
+}
+
+body.light .news-cont:hover {
+    background-color: #e8e8e8;
+}
+
+/* Стили для темной темы */
+body.dark .tag {
+    background-color: #525252;
+    color: #ffffff;
+}
+
+body.dark .tag:hover {
+    background-color: #972399;
+}
+
+body.dark .found_tag {
+    background-color: #a745a8;
+    color: #ffffff;
+}
+
+body.dark .found_tag:hover {
+    background-color: #972399;
+}
+
+body.dark .news-cont {
+    border: 2px solid #555555;
+    background-color: #333333;
+}
+
+body.dark .news-cont:hover {
+    background-color: #444444;
+}
+
+body {
+    transition: background-color 0.3s;
+}
+
+/* Стили для светлой темы */
+body.light .navbar {
+    background-color: #f8f9fa; /* Цвет фона светлой темы */
+    color: #000000; /* Цвет текста светлой темы */
+}
+
+body.light .navbar-nav .nav-item .nav-link {
+    color: #000; /* Цвет текста навигационных ссылок темной темы */
+}
+
+body.dark .navbar-nav .nav-item .nav-link {
+    color: #fff; /* Цвет текста навигационных ссылок темной темы */
+}
+
+
+/* Стили для темной темы */
+body.dark .navbar {
+    background-color: #3b3b3b; /* Цвет фона темной темы */
+    color: #ffffff; /* Цвет текста темной темы */
+}
+
+body.dark .navbar-brand {
+    color: #ffffff; /* Цвет текста темной темы */
+}
+
+
+/* Цвета для навигационной панели */
+    .navbar-nav .nav-item .nav-link {
+        color: #000; /* цвет текста */
+    }
+
+    .navbar-brand {
+    color: #000}
+
+/* Стили для светлой темы */
+.light .news-title {
+    color: #333; /* цвет текста для светлой темы */
+}
+
+.light .news-time {
+    color: #555; /* цвет текста времени для светлой темы */
+}
+
+/* Стили для темной темы */
+.dark .news-title {
+    color: #fff; /* цвет текста для темной темы */
+}
+
+.dark .news-time {
+    color: #ccc; /* цвет текста времени для темной темы */
+}
+
+.dark #moonIcon {
+    display: none;
+}
+
+.dark #sunIcon {
+    display: inline-block;
+}
+
+#moonIcon,
+#sunIcon {
+    width: 24px; /* Ширина иконок */
+    height: 24px; /* Высота иконок */
+    margin-bottom: 5px;
+}
+
+#themeSwitchContainer {
+    position: relative;
+    left: -10px; /* Измените значение сдвига по вашему усмотрению */
+}
+
+
+
+
+
+
+
+

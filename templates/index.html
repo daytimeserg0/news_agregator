@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агрегатор Новостей</title>
+    <link rel="stylesheet" type="text/css" href="static/styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="static/scripts_js/fetchNews.js"></script>
+    <script src="static/scripts_js/toogleTheme.js"></script>
+    <script src="static/scripts_js/searchPage.js"></script>
+    <script src="static/scripts_js/clicks.js"></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/">Главная</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        </div>
+        <div class="custom-control custom-switch ml-2" id="themeSwitchContainer">
+            <input type="checkbox" class="custom-control-input" id="themeSwitch" onclick="toggleTheme()">
+            <label class="custom-control-label" for="themeSwitch">
+                <img id="moonIcon" src="static/icons/moon-icon.png" alt="Moon Icon">
+                <img id="sunIcon" src="static/icons/sun-icon.png" alt="Sun Icon" style="display: none;">
+            </label>
+        </div>
+        <form class="form-inline my-2 my-lg-0" onsubmit="return searchPage()">
+            <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Введите тег" aria-label="Search" required>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+        </form>
+    </nav>
+</header>
+
+<!-- Элементы, в которые будут вставлены значения переменных -->
+<main class="container-fluid">
+    <div class="row" id="newsContainer">
+        <!-- Элементы будут добавлены здесь динамически -->
+    </div>
+</main>
+
+<footer class="bg-dark text-light text-center py-3">
+    &copy; 2023 Агрегатор новостей
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
