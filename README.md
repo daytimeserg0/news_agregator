@@ -1,2 +1,2 @@
 # news_agregator
-dsadsad
+тестовый коммит
