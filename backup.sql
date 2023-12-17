@@ -28,9 +28,9 @@ CREATE TABLE public.news (
     id integer NOT NULL,
     news_title text NOT NULL,
     news_href text NOT NULL,
+    news_tags text[]
     news_time text NOT NULL,
     news_img text NOT NULL,
-    news_tags text[]
 );
 
 
