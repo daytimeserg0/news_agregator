@@ -6,6 +6,7 @@
     }
 .tag:hover {
     background-color: #e3e567;
+    cursor: pointer;
 }
 
 .found_tag {
@@ -16,6 +17,7 @@
     }
 .found_tag:hover {
     background-color: #e3e567;
+    cursor: pointer;
 }
 
 .news-cont {
@@ -26,6 +28,7 @@
         margin-right: 20px;
         margin-left: 10px;
         width: 31vw;
+        cursor: pointer;
     }
 
 .news-cont:hover {
@@ -34,7 +37,7 @@
 
 .tags_finder {
     margin-bottom: 30px;
-    width: 100vw;
+    width: 100%;
 }
 
 .tag, .found_tag {
@@ -131,8 +134,8 @@ body {
 }
 
 /* Стили для светлой темы */
-body.light .navbar {
-    background-color: #f8f9fa; /* Цвет фона светлой темы */
+.navbar {
+    background-color: #ededed; /* Цвет фона светлой темы */
     color: #000000; /* Цвет текста светлой темы */
 }
 
@@ -206,6 +209,29 @@ body.dark .navbar-brand {
     display: flex;
     flex-wrap: wrap;
 }
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Устанавливаем минимальную высоту body равной 100% высоты видимой области */
+    margin: 0; /* Убираем внешние отступы у body */
+}
+
+.footer {
+    background-color: #343a40; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 1rem; /* Внутренние отступы */
+    margin-top: auto; /* Верхний отступ равен "остатку" до низа страницы */
+}
+
+
 
 
 
